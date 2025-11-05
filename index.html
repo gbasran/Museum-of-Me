@@ -1,61 +1,283 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <title>Museum of Me</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Museum of Me</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        
-        <a class="logo" href="index.html">
-            <span class="logo-sm">Museum of</span> 
-            <span class="logo-lrg">Me</span>
-        </a>
-        <nav>
-            <ul class="primary-nav">
-                <li><a href="current.html">Current Stats</a></li>
-                <li><a href="archive.html">Archive</a></li>
-                <li><a href="logs.html">Logs</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <span class="logo-sm">Museum of</span> 
+                <span class="logo-lrg">Me</span>
+            </a>
+            <nav>
+                <ul class="primary-nav">
+                    <li><a href="current.html">Current Stats</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                    <li><a href="logs.html">Logs</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-    <section class="purple-bkg">
-        <h2>Frequent Use Items</h2>
-        <p class="base-large">Description of item</p>
-        <a href="#" class="button">Button</a>
-        <!-- <p>Object 2 description</p>
-        <a href="#">Button</a>
-        <p>Object 3 description</p>
-        <a href="#">Button</a> -->
-    </section>
-    <section class="yellow-bkg">
-        <h2>People I see</h2>
-        <img src="images/person_1.png" alt="person 1">
-        <p>person 1</p>
-        <img src="images/person_2.png" alt="person 2">
-        <p>person 2</p>
-        <img src="images/person_3.png" alt="person 3">
-        <p>person 3</p>
-    </section>
-    <section class="green-bkg">
-        <h2>Places I Am</h2>
-        <img src="images/map.png">
-    </section>
-    <section class="pink-bkg">
-        <h2>Things I Hear</h2>
-        <img src="images/audio_1.png" alt="how did you sleep?">
-        <img src="images/audio_2.png" alt="One black coffee please">
-        <img src="images/audio_3.png" alt="I can fix your sleep deprevation">
-    </section>
-</main>
-    <footer></footer>
+        <!-- stuff i use a lot -->
+        <section class="section commonly-used">
+            <div class="container">
+                <h2>Commonly Used Items</h2>
+                <!-- originally tried just listing them but slider is way better -->
+                <article class="item-display">
+                    <!-- slider stuff -->
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="model-container">
+                            <!-- headphones -->
+                            <div class="slide active" data-item="headphones">
+                                <model-viewer 
+                                    src="models/Headphones.glb" 
+                                    alt="A 3D model of headphones"
+                                    auto-rotate 
+                                    camera-controls
+                                    ar
+                                    shadow-intensity="1">
+                                </model-viewer>
+                            </div>
+                            
+                            <!-- glasses -->
+                            <div class="slide" data-item="glasses">
+                                <model-viewer 
+                                    src="models/Glasses.glb" 
+                                    alt="A 3D model of glasses"
+                                    auto-rotate 
+                                    camera-controls
+                                    ar
+                                    shadow-intensity="1">
+                                </model-viewer>
+                            </div>
+                            
+                            <!-- keys -->
+                            <div class="slide" data-item="keys">
+                                <model-viewer 
+                                    src="models/keys.glb" 
+                                    alt="A 3D model of keys"
+                                    auto-rotate 
+                                    camera-controls
+                                    ar
+                                    shadow-intensity="1">
+                                </model-viewer>
+                            </div>
+                        </div>
+                        
+                        <button class="slider-btn next-btn" id="nextBtn" aria-label="Next item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- text that changes when you click the arrows -->
+                    <div class="item-text">
+                        <p class="meta item-meta">Frequently Used Object 1/3</p>
+                        <h3 class="item-title">Headphones</h3>
+                        <p class="item-description">use these pretty much all day. need them for music when im coding or just trying to block out noise. bluetooth is convenient but battery always dies at the worst time</p>
+                        <a href="#" class="button">Learn more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- people section -->
+        <section class="section yellow-bkg people-section">
+            <div class="container">
+                <h2>People I See</h2>
+                <div class="avatar-grid">
+                    <article class="avatar-item">
+                        <img src="images/avataaars (1).png" alt="Avatar of Keanen" class="avatar-img">
+                        <h3 class="avatar-name">Keanen</h3>
+                        <p class="avatar-label meta">Classmate</p>
+                        <div class="frequency-bar-container">
+                            <div class="frequency-bar" data-frequency="25"></div>
+                        </div>
+                        <p class="frequency-data">less than 1x/month</p>
+                    </article>
+                    <article class="avatar-item">
+                        <img src="images/avataaars (2).png" alt="Avatar of Madeline" class="avatar-img">
+                        <h3 class="avatar-name">Madeline</h3>
+                        <p class="avatar-label meta">Friend</p>
+                        <div class="frequency-bar-container">
+                            <div class="frequency-bar" data-frequency="35"></div>
+                        </div>
+                        <p class="frequency-data">1-2x/month</p>
+                    </article>
+                    <article class="avatar-item">
+                        <img src="images/avataaars (3).png" alt="Avatar of Jada" class="avatar-img">
+                        <h3 class="avatar-name">Jada</h3>
+                        <p class="avatar-label meta">Friend</p>
+                        <div class="frequency-bar-container">
+                            <div class="frequency-bar" data-frequency="80"></div>
+                        </div>
+                        <p class="frequency-data">5-6x/week</p>
+                    </article>
+                    <article class="avatar-item">
+                        <img src="images/avataaars (4).png" alt="Avatar of Adrian" class="avatar-img">
+                        <h3 class="avatar-name">Adrian</h3>
+                        <p class="avatar-label meta">Friend</p>
+                        <div class="frequency-bar-container">
+                            <div class="frequency-bar" data-frequency="100"></div>
+                        </div>
+                        <p class="frequency-data">7x/week</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- map section -->
+        <section class="section green-bkg places-section">
+            <div class="container">
+                <h2>Places I Go</h2>
+                <div class="map-container">
+                    <!-- my google maps embed -->
+                    <!-- used to be a static image but this is way more interactive
+                    <img src="images/map.jpg" alt="Map of places I visit" class="map-image">
+                    -->
+                    <iframe 
+                        src="https://www.google.com/maps/d/u/0/embed?mid=18iwic3UvZ0EUNyYiuilQMqCcIWA_Iz8&ehbc=2E312F&noprof=1" 
+                        width="100%" 
+                        height="600"
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Interactive map showing places I frequently visit">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- audio section -->
+        <section class="section pink-bkg audio-section">
+            <div class="container">
+                <h2>Things I Hear</h2>
+                <!-- custom audio players with waveforms look way better than default -->
+                <div class="audio-grid">
+                    <!-- audio 1 -->
+                    <article class="custom-audio-player">
+                        <div class="player-top">
+                            <p class="recording-date">recorded on 11-04-25</p>
+                            <div class="waveform-display">
+                                <video class="waveform-video">
+                                    <source src="videos/ambient_bird_noises.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="audio-title">birds chirping outside my window every morning. kinda nice actually, better than an alarm</p>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-btn">
+                                <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                </svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <input type="range" class="volume-slider" min="0" max="100" value="15">
+                        </div>
+                        <audio class="audio-hidden">
+                            <source src="audio/ambient_bird_sounds.mp3" type="audio/mpeg">
+                        </audio>
+                    </article>
+                    
+                    <!-- audio 2 -->
+                    <article class="custom-audio-player">
+                        <div class="player-top">
+                            <p class="recording-date">recorded on 11-04-25</p>
+                            <div class="waveform-display">
+                                <video class="waveform-video">
+                                    <source src="videos/ambient_car_noises.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="audio-title">traffic sounds from my commute. constant honking and engines. this is why i need headphones</p>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-btn">
+                                <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                </svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <input type="range" class="volume-slider" min="0" max="100" value="15">
+                        </div>
+                        <audio class="audio-hidden">
+                            <source src="audio/ambient_car_sounds.mp3" type="audio/mpeg">
+                        </audio>
+                    </article>
+                    
+                    <!-- audio 3 -->
+                    <article class="custom-audio-player">
+                        <div class="player-top">
+                            <p class="recording-date">recorded on 11-04-25</p>
+                            <div class="waveform-display">
+                                <video class="waveform-video">
+                                    <source src="videos/ay_67.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="audio-title">"ay 67" meme that literally everyone keeps saying. cant escape it even if i tried</p>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-btn">
+                                <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                </svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <input type="range" class="volume-slider" min="0" max="100" value="15">
+                        </div>
+                        <audio class="audio-hidden">
+                            <source src="audio/Ay_67.mp3" type="audio/mpeg">
+                        </audio>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gurmann Basran. all rights reserved.</p>
+            <p class="footer-note">made for new media design class</p>
+        </div>
+    </footer>
+
+    <!-- model viewer library -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    
+    <!-- main js -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

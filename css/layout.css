@@ -1,0 +1,27 @@
+/* container and section stuff */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 140px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+/* background colors for sections */
+.purple-bkg {
+    background: #a7acc5;
+}
+
+.yellow-bkg {
+    background: #ffd99d;
+}
+
+.green-bkg {
+    background: #9adbcf;
+}
+
+.pink-bkg {
+    background: #ffb7b2;
+}

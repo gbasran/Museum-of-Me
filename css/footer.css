@@ -1,0 +1,19 @@
+/* footer */
+.footer {
+    background: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer p {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+}
+
+.footer-note {
+    font-size: 13px;
+    color: #999;
+}

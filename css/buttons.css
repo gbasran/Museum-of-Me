@@ -1,0 +1,21 @@
+/* buttons */
+.button {
+    font-size: 20px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+    background-color: #9adbcf;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 23px;
+    transition: all 500ms;
+    border: 2px solid #9adbcf;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid #9adbcf;
+    color: #000000;
+}

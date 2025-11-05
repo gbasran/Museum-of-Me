@@ -1,0 +1,54 @@
+/* header stuff */
+.header {
+    background: #FFFFFF;
+    padding: 20px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+.logo {
+    text-decoration: none;
+    color: #3B3B3B;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.logo-sm {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.logo-lrg {
+    font-size: 83px;
+    font-weight: 700;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+}
+
+/* nav */
+.primary-nav {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.primary-nav a {
+    text-decoration: none;
+    color: #3B3B3B;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.primary-nav a:hover,
+.primary-nav a.active {
+    color: #9adbcf;
+}

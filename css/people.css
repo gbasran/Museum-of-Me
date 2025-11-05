@@ -1,0 +1,67 @@
+/* avatar grid for people section */
+.avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.avatar-item {
+    text-align: center;
+}
+
+.avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+/* tried 100px but looked too small
+.avatar-img {
+    width: 100px;
+    height: 100px;
+}
+*/
+
+.avatar-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.avatar-label {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* frequency bars */
+.frequency-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0 8px 0;
+}
+
+.frequency-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ffb7b2 0%, #ff8b85 100%);
+    border-radius: 10px;
+    transition: width 0.8s ease-in-out;
+    animation: growBar 1s ease-out;
+}
+
+/* wanted the bars to animate in smoothly when page loads */
+@keyframes growBar {
+    from {
+        width: 0 !important;
+    }
+}
+
+.frequency-data {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
