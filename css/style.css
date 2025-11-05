@@ -1,4 +1,4 @@
-/* main stylesheet - imports everything else */
+/* main stylesheet just imports everything else */
 @import url('base.css');
 @import url('layout.css');
 @import url('header.css');
@@ -8,3 +8,4 @@
 @import url('people.css');
 @import url('map.css');
 @import url('audio.css');
+@import url('responsive.css');

@@ -1,0 +1,85 @@
+/* mobile stuff */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .avatar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .audio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-display {
+        flex-direction: column;
+    }
+    
+    .slider-container {
+        width: 100%;
+    }
+}
+
+/* tablet and mobile breakpoints */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo-lrg {
+        font-size: 48px;
+    }
+
+    /* nav was horizontal but needed to stack on mobile */
+    .primary-nav {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .item-display {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .slider-container {
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .model-container {
+        min-height: 350px;
+    }
+    
+    model-viewer {
+        height: 350px;
+    }
+
+    .avatar-grid,
+    .audio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* old breakpoint i tried but 768 worked better
+@media (max-width: 900px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+*/
